@@ -3,7 +3,7 @@ pipeline{
 	   stages{
       		 stage('GetCode'){
             		steps{
-		  		 'url: https://github.com/suresh-22/samplemavenproject.git'
+		  		 git branch: 'main', credentialsId: 'pipeline', url: 'https://github.com/suresh-22/samplemavenproject.git'
             }
          }      
        		stage('Build'){
